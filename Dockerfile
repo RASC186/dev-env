@@ -59,19 +59,13 @@ COPY ./config/neovim/nvim/ /root/.config/nvim/
 
 # INSTALL TMUX
 
-RUN mkdir -p /tmp/tmux
-
-RUN wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz \
-  -P /tmp/tmux
-RUN tar xzvf /tmp/tmux/tmux-3.3a.tar.gz -C /tmp/tmux
-
-WORKDIR /tmp/tmux/tmux-3.3a/
-RUN ./configure 
-RUN make && make install
-
-RUN rm -rf /tmp/tmux
-
+RUN apt install -y tmux
 COPY ./config/tmux/tmux/ /root/.config/tmux/
+RUN git clone https://github.com/tmux-plugins/tpm.git \
+  /root/.config/tmux/plugins/tpm/
+RUN echo "\nPATH=$PATH" >> /root/.profile
+
+
 
 # SET WORKSPACE
 
