@@ -20,8 +20,8 @@ ENV LANG en_US.utf8
 RUN apt update
 RUN apt upgrade
 
+RUN apt install -y apt-utils pkg-config
 RUN apt install -y git 
-RUN apt install -y snapd 
 RUN apt install -y wget curl 
 RUN apt install -y unzip 
 RUN apt install -y ripgrep 
@@ -34,9 +34,9 @@ RUN apt install -y make cmake bear gdb
 RUN apt install -y latexmk texlive-full
 RUN apt install -y xclip 
 RUN apt install -y fuse
-RUN apt install -y bison
-RUN apt install -y apt-utils autotools-dev automake
-RUN apt install -y build-essential pkg-config libevent-dev libncurses5-dev byacc
+RUN apt install -y byacc bison 
+RUN apt install -y automake autotools-dev build-essential  
+RUN apt install -y libevent-dev libncurses5-dev 
 
 # CREATE .CONFIG DIRECTIORY
 
