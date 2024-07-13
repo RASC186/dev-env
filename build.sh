@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# CREATE WORKSPACE DIRECTORY
+
+if ! [ -d "./workspace" ] ; then
+
+  mkdir workspace
+
+fi
+
 # CREATE CONFIG DIRECTORY
 
 config_dirpath="./config"
