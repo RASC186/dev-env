@@ -68,8 +68,8 @@ if ! [ -d ${tmux_config_dirpath} ] ; then
 
 fi
 
-curl -L https://raw.githubusercontent.com/RASC186/tmux-setup/main/tmux.conf \
-  > "${tmux_config_dirpath}"/tmux.conf
+curl -L https://raw.githubusercontent.com/RASC186/tmux-setup/main/tmux/tmux.conf \
+  > "${tmux_config_dirpath}/tmux.conf"
 
 # BUILD DOCKER CONTAINER
 
