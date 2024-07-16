@@ -71,10 +71,6 @@ RUN git clone https://github.com/tmux-plugins/tpm.git \
   /root/.config/tmux/plugins/tpm/
 RUN echo "\nPATH=$PATH" >> /root/.profile
 
-# SET DISPLAY
-
-ENV DISPLAY=:0
-
 # SET WORKSPACE
 
 RUN mkdir /root/workspace

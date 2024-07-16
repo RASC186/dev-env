@@ -73,4 +73,8 @@ curl -L https://raw.githubusercontent.com/RASC186/tmux-setup/main/tmux/tmux.conf
 
 # BUILD DOCKER CONTAINER
 
-sudo docker build --tag dev-container ./
+if sudo docker build --tag dev-container ./ ; then
+
+  xhost +
+
+fi
