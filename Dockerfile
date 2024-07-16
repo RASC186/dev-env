@@ -43,6 +43,16 @@ RUN apt install -y byacc bison
 RUN apt install -y libevent-dev libncurses5-dev 
 RUN apt install -y automake autotools-dev build-essential  
 
+RUN apt install -y libglib2.0-dev
+RUN apt install -y libgdk-pixbuf-2.0-dev
+RUN apt install -y libgraphene-1.0-dev
+RUN apt install -y libsigc++-3.0-dev
+RUN apt install -y libgtk-4-dev 
+RUN apt install -y libglibmm-2.68-dev
+RUN apt install -y libcairomm-1.16-dev
+RUN apt install -y libpangomm-2.48-dev
+RUN apt install -y libgtkmm-4.0-dev
+
 # CREATE .CONFIG DIRECTIORY
 
 RUN mkdir -p /root/.config/
